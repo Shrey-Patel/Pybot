@@ -1,0 +1,22 @@
+
+language: python
+matrix:
+  include:
+    - os: linux
+      python: 2.7
+      env: TOXENV=py27
+    - os: osx
+      language: generic
+      env: TOXENV=py27
+addons:
+  apt:
+    packages:
+      - python-imdbpy
+      - python-notify2
+install:
+  - pip install -r requirements.txt
+script:
+  - cd $TRAVIS_BUILD_DIR/
+  - flake8 --select E,W --max-line-length=140 --ignore E722 jarviscli/
+  - cd jarviscli/
+  - python -m unittest discover

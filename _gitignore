@@ -1,0 +1,15 @@
+todolist.txt
+reminderlist.txt
+*.bak
+jarviscli/packages/memory/memory.json
+*.egg-info
+*.brn
+dist/
+build/
+env/
+*.DS_Store
+*.pyc
+.idea/
+MANIFEST.in
+setup.cfg
+setup.py
